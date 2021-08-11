@@ -6,28 +6,21 @@ import lombok.Setter;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class CustomResponse {
-    @Getter
-    @Setter
+@Getter
+@Setter
+public class ResponseDTO {
+
     private String content;
 
-    @Getter
-    @Setter
     private Timestamp datetime;
 
-    @Getter
-    @Setter
     private String endpoint;
 
-    CustomResponse(){
-        Date date = new Date();
-
-        this.content = "";
-        this.endpoint = "";
-        this.datetime = new Timestamp(date.getTime());
+    ResponseDTO() {
+        //
     }
 
-    CustomResponse(String content, String endpoint) {
+    ResponseDTO(String content, String endpoint) {
         Date date = new Date();
 
         this.content = content;
