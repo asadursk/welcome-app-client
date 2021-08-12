@@ -22,7 +22,7 @@ public class WelcomeClientService {
     private RandomChoice randomChoice;
 
     @Bean
-    public RestTemplate getRestTemplate() {
+    private RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 
@@ -44,6 +44,6 @@ public class WelcomeClientService {
     }
 
     private String buildRequest(String url) {
-        return Objects.requireNonNull(restTemplate.exchange(url, HttpMethod.GET, null, CustomResponse.class).getBody()).getContent();
+        return Objects.requireNonNull(restTemplate.exchange(url, HttpMethod.GET, null, ResponseDTO.class).getBody()).getContent();
     }
 }

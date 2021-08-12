@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WelcomeClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WelcomeClientApplication.class, args);
+		SpringApplication.run(WelcomeClientApplication.class);
 	}
 
 }
