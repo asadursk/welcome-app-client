@@ -2,5 +2,5 @@ server:
   port: 8081
 
 url:
-  boss: http://localhost:8080/welcome/official?name=Edek
-  colleague: http://localhost:8080/welcome/unofficial?name=Piotr
+  boss: http://localhost:8080/welcome/official?name={name}
+  colleague: http://localhost:8080/welcome/unofficial?name={name}
