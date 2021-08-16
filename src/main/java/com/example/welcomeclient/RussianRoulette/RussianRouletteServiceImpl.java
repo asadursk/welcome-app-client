@@ -1,11 +1,9 @@
 package com.example.welcomeclient.RussianRoulette;
 
-import org.springframework.stereotype.Service;
+import lombok.AllArgsConstructor;
 
-@Service
+@AllArgsConstructor
 public class RussianRouletteServiceImpl implements RussianRouletteService {
-    private final int minRandomRange = 1;
-    private final int maxRandomRange = 6;
 
     public boolean spinAndGetResult() {
         Integer bulletPosition = drawPosition();
@@ -15,6 +13,8 @@ public class RussianRouletteServiceImpl implements RussianRouletteService {
     }
 
     private int drawPosition() {
+        int maxRandomRange = 6;
+        int minRandomRange = 1;
         return (int) ((Math.random() * (maxRandomRange - minRandomRange)) + minRandomRange);
     }
 }
