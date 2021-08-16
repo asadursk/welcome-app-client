@@ -1,8 +1,10 @@
 package com.example.welcomeclient.CallService;
 
-import org.springframework.stereotype.Service;
-
-@Service
+/**
+ * CallService should communicate with Welcome Application via HTTP client.
+ *
+ * Each method should invoke proper request from Welcome Application.
+ */
 public interface CallService {
 
     String call(boolean isBossSelected);
