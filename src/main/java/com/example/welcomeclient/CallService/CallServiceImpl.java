@@ -16,8 +16,12 @@ public class CallServiceImpl implements CallService {
 
     private RestTemplate restTemplate;
 
-    public String callByName(boolean isBossSelected, String name) {
-        return makeRequest(getProperUrl(isBossSelected), name);
+    public String callBossByName(String name) {
+        return makeRequest(urlToCallBoss, name);
+    }
+
+    public String callColleagueByName(String name) {
+        return makeRequest(urlToCallColleague, name);
     }
 
     public String call(boolean isBossSelected) {

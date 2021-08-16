@@ -12,11 +12,11 @@ public class WelcomeClientServiceImpl implements WelcomeClientService {
     private RussianRouletteService russianRouletteService;
 
     public String callYourBoss(String name) {
-        return callService.callByName(true, name);
+        return callService.callBossByName(name);
     }
 
     public String callYourColleague(String name) {
-        return callService.callByName(false, name);
+        return callService.callColleagueByName(name);
     }
 
     public String callSomebody() {

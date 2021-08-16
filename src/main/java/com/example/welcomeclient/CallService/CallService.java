@@ -9,6 +9,8 @@ public interface CallService {
 
     String call(boolean isBossSelected);
 
-    String callByName(boolean isBossSelected, String name);
+    String callBossByName(String name);
+
+    String callColleagueByName(String name);
 
 }
