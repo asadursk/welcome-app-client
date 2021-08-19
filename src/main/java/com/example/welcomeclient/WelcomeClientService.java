@@ -5,9 +5,9 @@ package com.example.welcomeclient;
  */
 public interface WelcomeClientService {
 
-    String callYourBoss(String name);
+    ResponseDTO callYourBoss(String name);
 
-    String callYourColleague(String name);
+    ResponseDTO callYourColleague(String name);
 
-    String callSomebody();
+    ResponseDTO callSomebody();
 }

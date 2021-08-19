@@ -16,26 +16,26 @@ public class CallServiceImpl implements CallService {
 
     private RestTemplate restTemplate;
 
-    public String callBossByName(String name) {
+    public ResponseDTO callBossByName(String name) {
         return makeRequest(urlToCallBoss, name);
     }
 
-    public String callColleagueByName(String name) {
+    public ResponseDTO callColleagueByName(String name) {
         return makeRequest(urlToCallColleague, name);
     }
 
-    public String call(boolean isBossSelected) {
+    public ResponseDTO call(boolean isBossSelected) {
         return makeRequest(getProperUrl(isBossSelected), "");
     }
 
-    private String makeRequest(String url, String param) {
+    private ResponseDTO makeRequest(String url, String param) {
         ResponseDTO response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,
                 null,
                 ResponseDTO.class, param).getBody();
 
-        return Objects.requireNonNull(response).getContent();
+        return Objects.requireNonNull(response);
     }
 
     private String getProperUrl(boolean isBossSelected) {

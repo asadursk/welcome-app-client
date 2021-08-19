@@ -1,30 +1,27 @@
 package com.example.welcomeclient;
 
 import lombok.Getter;
-import lombok.Setter;
-
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Getter
-@Setter
 public class ResponseDTO {
 
-    private String content;
+    private String message;
+
+    private GreetingType greetingType;
 
     private Timestamp datetime;
 
     private String endpoint;
 
-    ResponseDTO() {
+    public ResponseDTO() {
         //
     }
 
-    ResponseDTO(String content, String endpoint) {
-        Date date = new Date();
-
-        this.content = content;
+    public ResponseDTO(String message, GreetingType greetingType, String endpoint, Timestamp timestamp) {
+        this.message = message;
+        this.greetingType = greetingType;
         this.endpoint = endpoint;
-        this.datetime = new Timestamp(date.getTime());
+        this.datetime = timestamp;
     }
 }

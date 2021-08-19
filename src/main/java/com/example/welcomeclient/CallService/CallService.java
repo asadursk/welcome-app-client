@@ -1,5 +1,7 @@
 package com.example.welcomeclient.CallService;
 
+import com.example.welcomeclient.ResponseDTO;
+
 /**
  * CallService should communicate with Welcome Application via HTTP client.
  *
@@ -7,10 +9,10 @@ package com.example.welcomeclient.CallService;
  */
 public interface CallService {
 
-    String call(boolean isBossSelected);
+    ResponseDTO call(boolean isBossSelected);
 
-    String callBossByName(String name);
+    ResponseDTO callBossByName(String name);
 
-    String callColleagueByName(String name);
+    ResponseDTO callColleagueByName(String name);
 
 }

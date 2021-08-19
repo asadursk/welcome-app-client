@@ -14,17 +14,17 @@ public class WelcomeClientController {
     private WelcomeClientService welcomeClientService;
 
     @GetMapping("/boss")
-    public String callYourBoss(@RequestParam String name) {
+    public ResponseDTO callYourBoss(@RequestParam String name) {
         return welcomeClientService.callYourBoss(name);
     }
 
     @GetMapping("/colleague")
-    public String callYourColleague(@RequestParam String name) {
+    public ResponseDTO callYourColleague(@RequestParam String name) {
         return welcomeClientService.callYourColleague(name);
     }
 
     @GetMapping("/somebody")
-    public String callSomebody() {
+    public ResponseDTO callSomebody() {
         return welcomeClientService.callSomebody();
     }
 }

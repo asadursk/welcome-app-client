@@ -11,15 +11,15 @@ public class WelcomeClientServiceImpl implements WelcomeClientService {
 
     private RussianRouletteService russianRouletteService;
 
-    public String callYourBoss(String name) {
+    public ResponseDTO callYourBoss(String name) {
         return callService.callBossByName(name);
     }
 
-    public String callYourColleague(String name) {
+    public ResponseDTO callYourColleague(String name) {
         return callService.callColleagueByName(name);
     }
 
-    public String callSomebody() {
+    public ResponseDTO callSomebody() {
         var isBossSelected = russianRouletteService.spinAndGetResult();
 
         return callService.call(isBossSelected);
