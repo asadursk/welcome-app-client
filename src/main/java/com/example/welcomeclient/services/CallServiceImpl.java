@@ -17,11 +17,11 @@ public class CallServiceImpl implements CallService {
     private RestTemplate restTemplate;
 
     public ResponseDTO callBossByName(String name) {
-        return makeRequest(urlToCallBoss, name);
+        return makeRequest(getProperUrl(true), name);
     }
 
     public ResponseDTO callColleagueByName(String name) {
-        return makeRequest(urlToCallColleague, name);
+        return makeRequest(getProperUrl(false), name);
     }
 
     public ResponseDTO call(boolean isBossSelected) {
