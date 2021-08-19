@@ -2,6 +2,8 @@ package com.example.welcomeclient.services;
 
 import lombok.AllArgsConstructor;
 
+import java.util.Random;
+
 @AllArgsConstructor
 public class RussianRouletteServiceImpl implements RussianRouletteService {
 
@@ -13,8 +15,10 @@ public class RussianRouletteServiceImpl implements RussianRouletteService {
     }
 
     private int drawPosition() {
-        int maxRandomRange = 6;
+        Random random = new Random();
+        int maxRandomRange = 7;
         int minRandomRange = 1;
-        return (int) ((Math.random() * (maxRandomRange - minRandomRange)) + minRandomRange);
+
+        return random.nextInt(maxRandomRange - minRandomRange) + minRandomRange;
     }
 }
