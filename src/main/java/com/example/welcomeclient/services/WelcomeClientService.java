@@ -1,4 +1,6 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.services;
+
+import com.example.welcomeclient.models.ResponseDTO;
 
 /**
  * WelcomeClientService should use CallService and make a call with proper arguments.

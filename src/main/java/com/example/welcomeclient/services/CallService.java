@@ -1,6 +1,6 @@
-package com.example.welcomeclient.CallService;
+package com.example.welcomeclient.services;
 
-import com.example.welcomeclient.ResponseDTO;
+import com.example.welcomeclient.models.ResponseDTO;
 
 /**
  * CallService should communicate with Welcome Application via HTTP client.

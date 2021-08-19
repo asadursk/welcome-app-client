@@ -1,9 +1,11 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.configuration;
 
-import com.example.welcomeclient.CallService.CallService;
-import com.example.welcomeclient.CallService.CallServiceImpl;
-import com.example.welcomeclient.RussianRoulette.RussianRouletteService;
-import com.example.welcomeclient.RussianRoulette.RussianRouletteServiceImpl;
+import com.example.welcomeclient.services.CallService;
+import com.example.welcomeclient.services.CallServiceImpl;
+import com.example.welcomeclient.services.RussianRouletteService;
+import com.example.welcomeclient.services.RussianRouletteServiceImpl;
+import com.example.welcomeclient.services.WelcomeClientService;
+import com.example.welcomeclient.services.WelcomeClientServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

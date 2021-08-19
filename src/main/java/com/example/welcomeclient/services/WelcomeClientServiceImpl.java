@@ -1,7 +1,6 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.services;
 
-import com.example.welcomeclient.CallService.CallService;
-import com.example.welcomeclient.RussianRoulette.RussianRouletteService;
+import com.example.welcomeclient.models.ResponseDTO;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

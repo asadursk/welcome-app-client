@@ -1,4 +1,4 @@
-package com.example.welcomeclient.RussianRoulette;
+package com.example.welcomeclient.services;
 
 import lombok.AllArgsConstructor;
 

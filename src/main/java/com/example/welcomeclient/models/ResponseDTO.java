@@ -1,5 +1,6 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.models;
 
+import com.example.welcomeclient.enums.GreetingType;
 import lombok.Getter;
 import java.sql.Timestamp;
 

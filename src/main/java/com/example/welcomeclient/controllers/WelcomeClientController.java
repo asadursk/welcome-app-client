@@ -1,5 +1,7 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.controllers;
 
+import com.example.welcomeclient.models.ResponseDTO;
+import com.example.welcomeclient.services.WelcomeClientService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

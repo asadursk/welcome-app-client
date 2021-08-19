@@ -1,4 +1,4 @@
-package com.example.welcomeclient;
+package com.example.welcomeclient.enums;
 
 public enum GreetingType {
     OFFICIAL, UNOFFICIAL
