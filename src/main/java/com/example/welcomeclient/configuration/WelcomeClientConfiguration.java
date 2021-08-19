@@ -22,12 +22,12 @@ public class WelcomeClientConfiguration {
     public String urlToCallBoss;
 
     @Bean
-    public WelcomeClientService WelcomeClientService(RussianRouletteService russianRouletteService, CallService callService) {
+    public WelcomeClientService welcomeClientService(RussianRouletteService russianRouletteService, CallService callService) {
         return new WelcomeClientServiceImpl(callService, russianRouletteService);
     }
 
     @Bean
-    public RussianRouletteService RussianRouletteService() {
+    public RussianRouletteService russianRouletteService() {
         return new RussianRouletteServiceImpl();
     }
 
@@ -37,7 +37,7 @@ public class WelcomeClientConfiguration {
     }
 
     @Bean
-    public CallService restTemplateService(RestTemplate restTemplate) {
+    public CallService callService(RestTemplate restTemplate) {
         return new CallServiceImpl(urlToCallColleague, urlToCallBoss, restTemplate);
     }
 }
